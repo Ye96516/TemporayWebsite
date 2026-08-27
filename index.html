@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>森林里的生日秘密</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="forest-bg"></div>
+
+  <main class="scene">
+    <section id="countdownScreen" class="card">
+      <div class="badge">🌿 FOREST SECRET</div>
+      <h1>森林正在等待一个特别的日子</h1>
+      <p class="lead">当九月五日到来，森林深处会亮起生日的灯火。</p>
+
+      <div class="countdown" aria-live="polite">
+        <div><strong id="days">--</strong><span>天</span></div>
+        <div><strong id="hours">--</strong><span>时</span></div>
+        <div><strong id="minutes">--</strong><span>分</span></div>
+        <div><strong id="seconds">--</strong><span>秒</span></div>
+      </div>
+
+      <p id="status" class="status">正在等待时间服务器……</p>
+      <p id="apiStatus" class="api-status">正在连接网络时间服务</p>
+
+      <!-- 删除调试功能时：把下面这个 button 整行删除即可 -->
+      <button id="debugBtn" class="debug-btn" type="button">
+        调试：立即进入生日画面
+      </button>
+    </section>
+
+    <section id="birthdayScreen" class="card birthday hidden">
+      <div class="fireflies" aria-hidden="true">✦　·　✧　　·　✦　·　✧</div>
+      <div class="badge">🎂 HAPPY BIRTHDAY</div>
+      <h1>生日快乐！</h1>
+      <p class="hero-text">
+        愿你走过的每一片森林，都有阳光、微风与藏在树叶间的惊喜。
+      </p>
+      <div class="lantern">🎂</div>
+      <p>今天，森林为你亮起灯火。</p>
+
+      <!-- 删除调试功能时：这个 button 也一起删除 -->
+      <button id="backBtn" class="debug-btn" type="button">
+        返回倒计时（调试）
+      </button>
+    </section>
+  </main>
+
+  <footer id="secretFooter">
+    <div class="secret-hint">
+      <span class="secret-title">🔐 欲知密码几何，且先通关游戏</span>
+      <span class="secret-loading">
+        游戏链接正在等待中……
+      </span>
+      <!-- 生日当天 JS 才会移除 hidden，让链接出现 -->
+      <a id="secretLink" class="secret-link hidden" href="game.html">
+        进入秘密游戏 →
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
