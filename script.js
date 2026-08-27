@@ -162,21 +162,21 @@ function tick() {
   }
 }
 
-/* ===== 调试：立即进入生日画面 ===== */
-document.getElementById("debugBtn").addEventListener("click", () => {
-  debugMode = true;
-  showBirthday();
-  status.textContent = "调试模式：已立即进入生日画面。";
-  // 调试模式下强制显示链接，便于预览
-  secretLink.classList.remove("hidden");
-});
+// /* ===== 调试：立即进入生日画面 ===== */
+// document.getElementById("debugBtn").addEventListener("click", () => {
+//   debugMode = true;
+//   showBirthday();
+//   status.textContent = "调试模式：已立即进入生日画面。";
+//   // 调试模式下强制显示链接，便于预览
+//   secretLink.classList.remove("hidden");
+// });
 
 /* ===== 调试：返回倒计时 ===== */
-document.getElementById("backBtn").addEventListener("click", () => {
-  debugMode = false;
-  showCountdown();
-  getServerTime(); // 重新获取时间，刷新一切
-});
+// document.getElementById("backBtn").addEventListener("click", () => {
+//   debugMode = false;
+//   showCountdown();
+//   getServerTime(); // 重新获取时间，刷新一切
+// });
 
 /*
   启动流程：
